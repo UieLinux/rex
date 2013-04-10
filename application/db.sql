@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Apr 06, 2013 alle 18:16
+-- Generato il: Apr 10, 2013 alle 21:49
 -- Versione del server: 5.5.25
 -- Versione PHP: 5.4.4
 
@@ -117,7 +117,10 @@ CREATE TABLE `studenti` (
 CREATE TABLE `utenti` (
   `id` varchar(50) NOT NULL,
   `utente_id` int(11) NOT NULL,
-  `tipo_utenza` int(11) NOT NULL
+  `tipo_utenza` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`,`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

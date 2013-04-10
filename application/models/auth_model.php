@@ -12,10 +12,10 @@ class Auth_model extends CI_Model {
 
       $q = $this
             ->db
-            ->where('email_address', $email)
+            ->where('email', $email)
             ->where('password', sha1($password))
             ->limit(1)
-            ->get('users');
+            ->get('utenti');
 
       if ( $q->num_rows > 0 ) {
          // person has account with us
