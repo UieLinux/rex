@@ -6,6 +6,7 @@ class Auth extends CI_Controller {
    {
       session_start();
       parent::__construct();
+       $this->load->helper('url');
    }
 
     public function index()
