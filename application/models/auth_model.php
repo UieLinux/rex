@@ -8,7 +8,6 @@ class Auth_model extends CI_Model {
 
    public function verify_user($email, $password)
    {
-      echo "db access";
 
       $q = $this
             ->db

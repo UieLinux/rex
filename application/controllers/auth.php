@@ -25,7 +25,6 @@ class Auth extends CI_Controller {
       if ( $this->form_validation->run() !== false ) {
          // then validation passed. Get from db
 
-         echo "validation passed 1";
 
          $this->load->model('auth_model');
          $res = $this
@@ -35,7 +34,6 @@ class Auth extends CI_Controller {
                      $this->input->post('password')
                   );
 
-         echo "validation passed 2";
 
          if ( $res !== false ) {
             $_SESSION['username'] = $this->input->post('email_address');
