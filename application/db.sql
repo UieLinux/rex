@@ -119,7 +119,7 @@ CREATE TABLE `utenti` (
   `utente_id` int(11) NOT NULL,
   `tipo_utenza` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` char(78) NOT NULL,
   PRIMARY KEY (`id`,`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
