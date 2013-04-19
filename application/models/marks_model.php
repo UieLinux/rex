@@ -25,13 +25,12 @@ class Marks_model extends CI_Model {
 
         if($q->num_rows > 0)
         {
-            $results = $q->row_array();
+        	$marks = array();
 
-            $marks = array();
-
-            foreach ($results as $value) {
-                array_push($marks, $value);
-            }
+			foreach ($q->result() as $row)
+			{
+			   array_push($marks, $row);
+			}
 
             return $marks;
         }

@@ -42,16 +42,10 @@ class Students extends CI_Controller {
 	{
 		$this->load->model('marks_model');
 
-		echo "id".$id;
-
-		$data['test_text'] = $this->marks_model->load_student_marks_by_subject($id, $subject_id);
+		$data['test_text'] = $this->marks_model->load_student_marks($id);
 
 		// TODO: show view
-
-		// should use some kind of templating to avoid this shit
-		$this->load->view('header_bs', $data);
-		$this->load->view('students/list', $data);
-		$this->load->view('footer_bs');
+		print_r($data['test_text']);
 	}
 
 	/* WTF: overload not permitted in PHP ????   http://stackoverflow.com/questions/4697705/php-function-overloading
