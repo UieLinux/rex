@@ -42,4 +42,20 @@ class Student_model extends CI_Model {
 
         return false; //return null
     }
+
+    function load_student_marks_by_subject($id, $subject_id)
+    {
+        $q = $this
+            ->db
+            ->where('materie_id', $subject_id)
+            ->where('studenti_id', $id)
+            ->get('valutazioni')
+
+        if($q->num_rows > 0)
+        {
+            return $q->row_array();
+        }
+
+        return false;
+    }
 }

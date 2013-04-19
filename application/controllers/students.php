@@ -37,5 +37,14 @@ class Students extends CI_Controller {
 		$this->load->view('students/detail', $data);
 		$this->load->view('footer_bs');
 	}
+
+	public function get_all_marks($id, $subject_id)
+	{
+		$this->load->model('student_model');
+
+		$data['test_text'] = $this->marks_model->load_student_marks_by_subject($id, $subject_id)
+
+		// TODO: show view
+	}
 }
 ?>
