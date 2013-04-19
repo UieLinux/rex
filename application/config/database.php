@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'trex';
-$db['default']['password'] = 'trex';
-$db['default']['database'] = 'trex';
+$db['default']['username'] = 'rex';
+$db['default']['password'] = 'rex';
+$db['default']['database'] = 'rex';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
