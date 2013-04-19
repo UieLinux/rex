@@ -8,12 +8,12 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="/registro/assets/bs/css/bootstrap.css" rel="stylesheet">
-    <link href="/registro/assets/login_forms.css" rel="stylesheet">
+    <link href="/rex/assets/bs/css/bootstrap.css" rel="stylesheet">
+    <link href="/rex/assets/login_forms.css" rel="stylesheet">
     <style type="text/css">
       body {
          /*background: url(http://interfacelift.com/wallpaper/D47cd523/03148_officesatnight_1600x1200.jpg) no-repeat center center fixed; */
-         background: url(/registro/assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;
+         background: url(/rex/assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;
          -webkit-background-size: cover;
          -moz-background-size: cover;
          -o-background-size: cover;
@@ -35,7 +35,7 @@
         }
       }
     </style>
-    <link href="/registro/assets/bs/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/rex/assets/bs/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -43,11 +43,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/registro/assets/bs/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/registro/assets/bs/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/registro/assets/bs/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="/registro/assets/bs/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="/registro/assets/bs/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/rex/assets/bs/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/rex/assets/bs/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/rex/assets/bs/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/rex/assets/bs/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/rex/assets/bs/ico/favicon.png">
   </head>
 
   <body>
@@ -59,7 +59,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/registro/index.php">Registro Elettronico</a>
+          <a class="brand" href="/rex/index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
