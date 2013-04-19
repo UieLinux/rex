@@ -358,5 +358,20 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+
+/* 
+Custom autoload funcion to autoload existing files with prefix != CI_
+see: http://blog.daanraman.com/coding/extending-a-controller-using-my_controller-in-codeigniter-2-0-and-above/
+*/
+function __autoload($class)
+{
+    if (substr($class,0,3) !== 'CI_')
+    {
+        if (file_exists($file = APPPATH . 'core/' . $class . EXT))
+        {
+            include $file;
+        }
+    }
+}
 /* End of file config.php */
 /* Location: ./application/config/config.php */

@@ -1,5 +1,5 @@
 <?php
-class Teachers_model extends CI_Model {
+class Teacher_model extends CI_Model {
 
     var $id = 0;
     var $nome = '';

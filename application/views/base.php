@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Un titolo originale: Registro elettronico</title>
+    <title>Registro elettronico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -54,14 +54,49 @@
           <a class="brand" href="/rex/index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              Logged in as <a href="#" class="navbar-link"><?php echo $username; ?></a>
             </p>
             <ul class="nav">
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="active"><a href="index.php/students">Studenti</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+
+
+    <?php echo $content; ?>
+
+
+  <br />
+  <footer>
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="container">
+                    <p>&copy; UIELinux 2013</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-transition.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-alert.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-modal.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-dropdown.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-scrollspy.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-tab.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-tooltip.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-popover.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-button.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-collapse.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-carousel.js"></script>
+    <script src="/rex/assets/bs/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

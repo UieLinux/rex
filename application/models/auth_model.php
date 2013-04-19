@@ -23,11 +23,14 @@ class Auth_model extends CI_Model {
 
        $user = $q->row();
 
+      /* temporary disabled for testing purposes
+
        // la password è corretta?
        if (validate_password($password, $user->{'password'})) {
            return $user;
        } else {
            return false;
        }
+       */
    }
 }

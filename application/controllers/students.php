@@ -1,22 +1,26 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Students extends CI_Controller {
+class Students extends MY_Base_Controller{
 	/*
 		is user logged in ?
 	*/
 	function __construct()
 	{
-		session_start();
+		if(!isset($_SESSION))
+		{
+			session_start();
+		}
+		
 		parent::__construct();
         $this->load->helper('url');
 		if (!isset($_SESSION['username'])) {
-			//redirect('auth');
+			redirect('auth');
 		}
 	}
 
 	public function index()
 	{
-		$this->load->model('student_model');
+		$this->load->model('students_model');
 		
 		$data['test_text'] = $this->students_model->load_students();
 		
@@ -28,7 +32,7 @@ class Students extends CI_Controller {
 	
 	public function detail($id)
 	{
-		$this->load->model('student_model');
+		$this->load->model('students_model');
 		
 		$data['test_text'] = $this->students_model->load_student($id);
 		

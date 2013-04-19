@@ -49,7 +49,7 @@ class Student_model extends CI_Model {
             ->db
             ->where('materie_id', $subject_id)
             ->where('studenti_id', $id)
-            ->get('valutazioni')
+            ->get('valutazioni');
 
         if($q->num_rows > 0)
         {

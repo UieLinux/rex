@@ -20,12 +20,8 @@ class Auth extends CI_Controller {
       $this->form_validation->set_rules('email_address', 'Email Address', 'valid_email|required');
       $this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
 
-      //$test = $this->form_validation->run();
-      //echo $test ? 'true' : 'false';
-
       if ( $this->form_validation->run() !== false ) {
          // then validation passed. Get from db
-
 
          $this->load->model('auth_model');
          $res = $this
