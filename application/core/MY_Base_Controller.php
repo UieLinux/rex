@@ -20,11 +20,11 @@ class MY_Base_Controller extends CI_Controller {
         $this->load->helper('url');
 		if (!isset($_SESSION['username']))
 		{
-			$data['username'] = $_SESSION['username'];
+			$data['username'] = '?';
 		}
 		else
 		{
-			$data['username'] = '?';
+			$data['username'] = $_SESSION['username'];
 		}
 
         

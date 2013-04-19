@@ -35,10 +35,7 @@ class Welcome extends MY_Base_Controller {
 
 	public function index()
 	{
-		//$this->load->view('welcome_message');
-		//$this->load->view('header_bs');
 		$this->load->view('home');
-		//$this->load->view('footer_bs');
 	}
 }
 

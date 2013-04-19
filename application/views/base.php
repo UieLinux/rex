@@ -54,10 +54,10 @@
           <a class="brand" href="/rex/index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link"><?php echo $username; ?></a>
+              Utente:  <a href="#" class="navbar-link"><?php echo $username; ?></a>
             </p>
             <ul class="nav">
-              <li><a href="#about">About</a></li>
+              <li><a href="#about">Info</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -72,8 +72,10 @@
   <footer>
         <div class="navbar navbar-fixed-bottom">
             <div class="navbar-inner">
-                <div class="container">
-                    <p>&copy; UIELinux 2013</p>
+                <div class="row-fluid">
+                    <div class="span6 offset5">
+                    <p><a href="http://www.uielinux.org/">&copy; UIELinux 2013</a></p>
+                    </div>
                 </div>
             </div>
         </div>

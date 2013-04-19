@@ -62,12 +62,10 @@
           <a class="brand" href="/rex/index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              Utente: <a href="#" class="navbar-link">Username</a>
             </p>
             <ul class="nav">
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="active"><a href="index.php/students">Studenti</a></li>
+              <li><a href="#about">Info</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
