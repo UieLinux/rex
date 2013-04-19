@@ -16,13 +16,12 @@ class Marks_model extends CI_Model {
         $this->load->database();
     }
 
-    function load_student_marks_by_subject($id, $subject_id)
+    function load_student_marks($id)
     {
         $q = $this
             ->db
-            ->where('materie_id', $subject_id)
             ->where('studenti_id', $id)
-            ->get('valutazioni')
+            ->get('valutazioni');
 
         if($q->num_rows > 0)
         {
@@ -31,11 +30,36 @@ class Marks_model extends CI_Model {
             $marks = array();
 
             foreach ($results as $value) {
-                array_push($marks, $value)
+                array_push($marks, $value);
             }
 
-            return $marks
+            return $marks;
         }
 
         return false;
     }
+
+    function load_student_marks_by_subject($id, $subject_id)
+    {
+        $q = $this
+            ->db
+            ->where('materie_id', $subject_id)
+            ->where('studenti_id', $id)
+            ->get('valutazioni');
+
+        if($q->num_rows > 0)
+        {
+            $results = $q->row_array();
+
+            $marks = array();
+
+            foreach ($results as $value) {
+                array_push($marks, $value);
+            }
+
+            return $marks;
+        }
+
+        return false;
+    }
+}
