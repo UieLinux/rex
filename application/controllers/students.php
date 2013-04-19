@@ -38,6 +38,21 @@ class Students extends CI_Controller {
 		$this->load->view('footer_bs');
 	}
 
+	//POST
+	public function evaluate()
+	{
+		if($this->input->post())
+		{
+			$posted_payload = $this->input->post();
+
+			print_r($posted_payload);
+		}
+		else
+		{
+			//TODO: redirect to form view
+		}
+	}
+
 	public function marks($id)
 	{
 		$this->load->model('marks_model');
