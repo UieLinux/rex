@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../assets/bs/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/login_forms.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <style type="text/css">
       body {
          /*background: url(http://interfacelift.com/wallpaper/D47cd523/03148_officesatnight_1600x1200.jpg) no-repeat center center fixed; */
@@ -35,7 +35,6 @@
         }
       }
     </style>
-    <link href="../assets/bs/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

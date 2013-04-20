@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="/rex/assets/bs/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -27,7 +27,6 @@
         }
       }
     </style>
-    <link href="/rex/assets/bs/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
