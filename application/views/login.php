@@ -13,7 +13,6 @@
     <style type="text/css">
       body {
          /*background: url(http://interfacelift.com/wallpaper/D47cd523/03148_officesatnight_1600x1200.jpg) no-repeat center center fixed; */
-         /*background: url(/rex/assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;*/
          background: url(../assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;
          -webkit-background-size: cover;
          -moz-background-size: cover;
@@ -63,7 +62,7 @@
           <a class="brand" href="../index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Utente: <a href="#" class="navbar-link">Username</a>
+              Utente: <a href="#" class="navbar-link">Sconosciuto</a>
             </p>
             <ul class="nav">
               <li><a href="#about">Info</a></li>
