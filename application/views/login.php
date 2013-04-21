@@ -12,12 +12,18 @@
     <link href="../assets/login_forms.css" rel="stylesheet">
     <style type="text/css">
       body {
-         /*background: url(http://interfacelift.com/wallpaper/D47cd523/03148_officesatnight_1600x1200.jpg) no-repeat center center fixed; */
-         background: url(../assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;
+         /* image backgrounds (full size photo) */
+         /*background: url(../assets/img/login_bg_1600x1200.jpg) no-repeat center center fixed;*/
+         /*background: url(../assets/img/rand_1680_1050.png) no-repeat center center fixed;
+          
          -webkit-background-size: cover;
          -moz-background-size: cover;
          -o-background-size: cover;
          background-size: cover;
+         */
+
+         /* tile background */
+         background-image: url(../assets/img/monochrome.png); background-repeat: repeat;
 
         padding-top: 60px;
         padding-bottom: 40px;
@@ -92,7 +98,9 @@
 <div class="container-fluid">
 
 <div id="body">
-   
+
+<div class="row-fluid" style="margin-bottom:10%;"><!-- spacer --></div>
+
 <div class="row-fluid">
 <div class="span4"></div>
 <div class="span4">
