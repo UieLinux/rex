@@ -23,11 +23,11 @@ class Classes extends MY_Base_Controller{
 
 		$this->load->model('class_model');
 
-		$data['test_text'] = $this->class_model->getClassesForTeacher($_SESSION['userid']);
+		$data['classes_data'] = $this->class_model->getClassesForTeacher($_SESSION['userid']);
 
-		print_r($data);
+		#print_r($data);
 
-		// TODO: $this->load->view('classes');
+		$this->load->view('classes/classeslist', $data);
 	}
 }
 ?>
