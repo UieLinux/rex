@@ -23,7 +23,7 @@ class Classes extends MY_Base_Controller{
 
 		$this->load->model('class_model');
 
-		$data['classes_data'] = $this->class_model->getClassesByTeacher($_SESSION['userid']);
+		$data['classes_data'] = $this->class_model->get_classes_by_teacher($_SESSION['userid']);
 
 		$this->load->view('classes/classeslist', $data);
 	}
@@ -31,8 +31,10 @@ class Classes extends MY_Base_Controller{
 	public function details($class_id)
 	{
 		$this->load->model('class_model');
+		$this->load->model('student_model');
 		
-		$data['class_data'] = $this->class_model->getClassDetails($classId);
+		$data['class_data'] = $this->class_model->get_class($classId);
+		$data['students_list'] = $this->student_model->get_students_by_class($class_id);
 
 		$this->load->view('classes/classDetails', $data);
 	}

@@ -58,4 +58,31 @@ class Student_model extends CI_Model {
 
         return false;
     }
+
+    public function get_students_by_class($class_id)
+    {
+        $q = $this
+            ->db
+            ->select('*')
+            ->from('frequentazioni')
+            ->join('classi','frequentazioni.classi_id = classi.id')
+            ->join('studenti','frequentazioni.studenti_id = studenti.id')
+            ->where('frequentazioni.classi_id', $class_id)
+            ->get();
+
+
+        if($q->num_rows > 0)
+        {
+            $students = array();
+
+            foreach ($q->result() as $row)
+            {
+               array_push($students, $row);
+            }
+
+            return $students;
+        }
+
+        return false;
+    }
 }
