@@ -43,7 +43,7 @@
                 
                 foreach($classes as $class)
                 {
-                  echo"<tr><td>".$class->codice."</td><td>".$class->nome."</td><td>".$class->nomeistituto."</td></tr>";
+                  echo"<tr><td>".$class->codice."</td><td>".$class->nome."</td><td>".$class->nomeistituto."</td><td><a href=".site_url("classes/details/".$class->classi_id).">dettaglio</a></td></tr>";
                 }
                 
                 ?>
