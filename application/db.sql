@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: Apr 19, 2013 alle 23:37
--- Versione del server: 5.5.25
--- Versione PHP: 5.4.4
+-- Host: 127.0.0.1
+-- Generation Time: Apr 23, 2013 at 12:25 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `rex`
@@ -17,24 +23,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `classi`
+-- Table structure for table `classi`
 --
 
-CREATE TABLE `classi` (
+CREATE TABLE IF NOT EXISTS `classi` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `codice` varchar(5) NOT NULL,
+  `codice` varchar(10) NOT NULL,
   `as` varchar(10) NOT NULL,
   `istituto` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `classi`
+--
+
+INSERT INTO `classi` (`id`, `codice`, `as`, `istituto`) VALUES
+(1, '3a', '2012-2013', 0),
+(2, '1b', '2012-2013', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `docenti`
+-- Table structure for table `docenti`
 --
 
-CREATE TABLE `docenti` (
+CREATE TABLE IF NOT EXISTS `docenti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `cognome` varchar(100) NOT NULL,
@@ -44,10 +58,10 @@ CREATE TABLE `docenti` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `frequentazioni`
+-- Table structure for table `frequentazioni`
 --
 
-CREATE TABLE `frequentazioni` (
+CREATE TABLE IF NOT EXISTS `frequentazioni` (
   `studenti_id` int(11) NOT NULL,
   `classi_id` int(11) NOT NULL,
   `as` varchar(10) NOT NULL,
@@ -57,23 +71,30 @@ CREATE TABLE `frequentazioni` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `insegnamenti`
+-- Table structure for table `insegnamenti`
 --
 
-CREATE TABLE `insegnamenti` (
+CREATE TABLE IF NOT EXISTS `insegnamenti` (
   `docenti_id` int(11) NOT NULL,
   `materie_id` int(11) NOT NULL,
   `classi_id` int(11) NOT NULL,
   PRIMARY KEY (`docenti_id`,`materie_id`,`classi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `insegnamenti`
+--
+
+INSERT INTO `insegnamenti` (`docenti_id`, `materie_id`, `classi_id`) VALUES
+(0, 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `lezioni`
+-- Table structure for table `lezioni`
 --
 
-CREATE TABLE `lezioni` (
+CREATE TABLE IF NOT EXISTS `lezioni` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `docenti_id` int(11) NOT NULL,
   `materie_id` int(11) NOT NULL,
@@ -86,22 +107,29 @@ CREATE TABLE `lezioni` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `materie`
+-- Table structure for table `materie`
 --
 
-CREATE TABLE `materie` (
+CREATE TABLE IF NOT EXISTS `materie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `materie`
+--
+
+INSERT INTO `materie` (`id`, `nome`) VALUES
+(1, 'Matematica');
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `studenti`
+-- Table structure for table `studenti`
 --
 
-CREATE TABLE `studenti` (
+CREATE TABLE IF NOT EXISTS `studenti` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `cognome` varchar(100) NOT NULL,
@@ -111,10 +139,10 @@ CREATE TABLE `studenti` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `utenti`
+-- Table structure for table `utenti`
 --
 
-CREATE TABLE `utenti` (
+CREATE TABLE IF NOT EXISTS `utenti` (
   `id` varchar(50) NOT NULL,
   `utente_id` int(11) NOT NULL,
   `tipo_utenza` int(11) NOT NULL,
@@ -124,7 +152,7 @@ CREATE TABLE `utenti` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dump dei dati per la tabella `utenti`
+-- Dumping data for table `utenti`
 --
 
 INSERT INTO `utenti` (`id`, `utente_id`, `tipo_utenza`, `email`, `password`) VALUES
@@ -133,10 +161,10 @@ INSERT INTO `utenti` (`id`, `utente_id`, `tipo_utenza`, `email`, `password`) VAL
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `valutazioni`
+-- Table structure for table `valutazioni`
 --
 
-CREATE TABLE `valutazioni` (
+CREATE TABLE IF NOT EXISTS `valutazioni` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `materie_id` int(11) NOT NULL,
   `studenti_id` int(11) NOT NULL,
@@ -147,9 +175,13 @@ CREATE TABLE `valutazioni` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dump dei dati per la tabella `valutazioni`
+-- Dumping data for table `valutazioni`
 --
 
 INSERT INTO `valutazioni` (`id`, `materie_id`, `studenti_id`, `docenti_id`, `valutazione`, `data`) VALUES
 (1, 0, 0, 0, 5.5, 20130418),
 (2, 0, 0, 0, 6.75, 20130419);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

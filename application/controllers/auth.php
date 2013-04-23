@@ -34,6 +34,8 @@ class Auth extends CI_Controller {
 
          if ( $res !== false ) {
             $_SESSION['username'] = $this->input->post('email_address');
+            $_SESSION['userid'] = $res->utente_id;
+            
             redirect('welcome');
          }
 

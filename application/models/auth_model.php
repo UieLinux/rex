@@ -23,6 +23,8 @@ class Auth_model extends CI_Model {
 
        $user = $q->row();
 
+       return $user;
+
       /* temporary disabled for testing purposes
 
        // la password è corretta?

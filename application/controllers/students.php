@@ -20,7 +20,7 @@ class Students extends MY_Base_Controller{
 
 	public function index()
 	{
-		$this->load->model('students_model');
+		$this->load->model('student_model');
 		
 		$data['test_text'] = $this->students_model->load_students();
 		
@@ -32,7 +32,7 @@ class Students extends MY_Base_Controller{
 	
 	public function detail($id)
 	{
-		$this->load->model('students_model');
+		$this->load->model('student_model');
 		
 		$data['test_text'] = $this->students_model->load_student($id);
 		
