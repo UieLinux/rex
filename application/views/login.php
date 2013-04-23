@@ -104,7 +104,7 @@
    $attributes = array('class' => 'form-signin'); 
    echo form_open('auth', $attributes); 
 ?>
-<h2 class="form-signin-heading">Please sign in</h2>
+<h2 class="form-signin-heading">Login</h2>
 <p>
    <?php 
       //echo form_label('Email Address: ', 'email_address');

@@ -5,8 +5,8 @@
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
               <li class="active"><a href="#">Link</a></li>
-              <li><a href="/classes">Classi</a></li>
-              <li><a href="#">Link</a></li>
+              <li><a href="<?php echo site_url("welcome"); ?>">Pagina iniziale</a></li>
+              <li><a href="<?php echo site_url("classes"); ?>">Classi</a></li>
               <li><a href="#">Link</a></li>
               <li class="nav-header">Sidebar</li>
               <li><a href="#">Link</a></li>

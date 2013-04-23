@@ -21,6 +21,7 @@ class Class_model extends CI_Model {
             ->from('classi')
             ->join('insegnamenti','insegnamenti.classi_id = classi.id')
             ->join('materie','materie.id = insegnamenti.materie_id')
+            ->join('istituti','istituti.id = classi.istituti_id')
             ->where('insegnamenti.docenti_id', $teacherId)
             ->get();
 

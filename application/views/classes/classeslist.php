@@ -5,8 +5,8 @@
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
               <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li><a href="<?php echo site_url("welcome"); ?>">Pagina iniziale</a></li>
+              <li><a href="<?php echo site_url("classes"); ?>">Classi</a></li>
               <li><a href="#">Link</a></li>
               <li class="nav-header">Sidebar</li>
               <li><a href="#">Link</a></li>
@@ -30,7 +30,6 @@
                 <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Classe</th>
                   <th>Materia</th>
                   <th>Istituto</th>
@@ -39,12 +38,14 @@
               
               <tbody>
                 <?php
+                
                 $classes = $classes_data;
- 
+                
                 foreach($classes as $class)
                 {
-                  echo"<tr><td>".$class->id."</td><td>".$class->codice."</td><td>".$class->nome."</td><td>".$class->codice."</td></tr>";
+                  echo"<tr><td>".$class->codice."</td><td>".$class->nome."</td><td>".$class->nomeistituto."</td></tr>";
                 }
+                
                 ?>
               </tbody>
             </table>
