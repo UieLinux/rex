@@ -57,9 +57,15 @@
           </button>
           <a class="brand" href="../index.php">Registro Elettronico</a>
           <div class="nav-collapse collapse">
+            
             <p class="navbar-text pull-right">
-              Utente:  <a href="#" class="navbar-link"><?php echo $username; ?></a>
+              <a href="/auth/logout" class="navbar-link">Logout</a>
             </p>
+
+            <p class="navbar-text pull-right">
+              Utente:  <a href="#" class="navbar-link"><?php echo $username; ?></a>&nbsp;&nbsp;&nbsp;
+            </p>
+
             <ul class="nav">
               <li><a href="#about">Info</a></li>
             </ul>
