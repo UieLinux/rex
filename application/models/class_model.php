@@ -13,7 +13,7 @@ class Class_model extends CI_Model {
         $this->load->database();
     }
 
-    function getClassesForTeacher($teacherId)
+    function getClassesByTeacher($teacherId)
     {
     	$q = $this
             ->db
@@ -34,6 +34,21 @@ class Class_model extends CI_Model {
 			}
 
             return $classes;
+        }
+
+        return false;
+    }
+
+    function getClass($class_id)
+    {
+        $q = $this
+            ->db
+            ->where('id', $id)
+            ->limit(1)
+            ->get('classi');
+
+        if ( $q->num_rows > 0 ) {
+            return $q->row();
         }
 
         return false;

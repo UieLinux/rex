@@ -18,7 +18,7 @@ class Teachers extends CI_Controller {
 	{
 		$this->load->model('teacher_model');
 		
-		$data['test_text'] = $this->students_model->load_students();
+		$data['test_text'] = $this->teacher_model->load_teacher();
 		
 		// should use some kind of templating to avoid this shit
 		$this->load->view('header_bs', $data);
