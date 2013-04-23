@@ -50,5 +50,6 @@ class Auth extends CI_Controller {
    {
       session_destroy();
       $this->load->view('login');
+      $this->load->view('footer_bs');
    }
 }
