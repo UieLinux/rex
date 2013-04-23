@@ -20,19 +20,7 @@ class Classes extends MY_Base_Controller{
 
 	public function index()
 	{
-		echo $_SESSION['userid'];
-		
-		$this->load->model('class_model');
 
-		$data['test_text'] = $this->class_model->getClassesForTeacher($_SESSION['userid']);
-
-		print_r($data);
-
-		// TODO: $this->load->view('classes');
-	}
-
-	public function classes()
-	{
 		$this->load->model('class_model');
 
 		$data['test_text'] = $this->class_model->getClassesForTeacher($_SESSION['userid']);
