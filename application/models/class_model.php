@@ -43,7 +43,7 @@ class Class_model extends CI_Model {
     {
         $q = $this
             ->db
-            ->where('id', $id)
+            ->where('id', $class_id)
             ->limit(1)
             ->get('classi');
 

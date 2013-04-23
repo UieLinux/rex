@@ -33,10 +33,12 @@ class Classes extends MY_Base_Controller{
 		$this->load->model('class_model');
 		$this->load->model('student_model');
 		
-		$data['class_data'] = $this->class_model->get_class($classId);
+		$data['class_data'] = $this->class_model->get_class($class_id);
 		$data['students_list'] = $this->student_model->get_students_by_class($class_id);
 
-		$this->load->view('classes/classDetails', $data);
+		//TODO: build view
+		//$this->load->view('classes/classDetails', $data);
+		print_r($data);
 	}
 }
 ?>
