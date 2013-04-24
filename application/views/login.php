@@ -65,7 +65,7 @@
             </p>
             <ul class="nav">
               <li><a href="#about">Info</a></li>
-              <li><a href="#" id="helper" name="helper" data-toggle="chardinjs" data-position="left">Aiuto</a></li>
+              <li><a href="#" id="helper" name="helper" data-toggle="chardinjs" data-position="bottom" data-intro="Se hai un dubbio clicca su 'Aiuto'.">Aiuto</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
