@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="../assets/login_forms.css" rel="stylesheet">
+    <link href="../assets/chardinjs.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -64,6 +65,7 @@
             </p>
             <ul class="nav">
               <li><a href="#about">Info</a></li>
+              <li><a href="#" id="helper" name="helper" data-toggle="chardinjs" data-position="left">Aiuto</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -105,14 +107,14 @@
    echo form_open('auth', $attributes); 
 ?>
 <h2 class="form-signin-heading">Login</h2>
-<p>
+<p data-intro="Inserisci la tua email." data-position="right">
    <?php 
       //echo form_label('Email Address: ', 'email_address');
       echo form_input('email_address', set_value('email_address'), 'class="input-block-level" id="email_address" autofocus placeholder="nome utente"');
    ?>
 </p>
 
-<p>
+<p data-intro="Inserisci la tua password." data-position="right">
    <?php 
       //echo form_label('Password:', 'password');
       echo form_password('password', '', 'class="input-block-level" id="password" placeholder="password"');
