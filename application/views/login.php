@@ -122,7 +122,7 @@
 </p>
 
 <p>
-   <?php echo form_submit('submit', 'Login', 'class="btn btn-large btn-primary"'); ?>
+   <?php echo form_submit('submit', 'Login', 'class="btn btn-large btn-primary" data-intro="Clicca per accedere." data-position="bottom"'); ?>
 </p>
 <?php echo form_close(); ?>
 
