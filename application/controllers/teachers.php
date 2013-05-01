@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Teachers extends CI_Controller {
+class Teachers extends MY_Base_Controller {
 	/*
 		is user logged in ?
 	*/
@@ -17,13 +17,15 @@ class Teachers extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('teacher_model');
-		
-		$data['test_text'] = $this->teacher_model->load_teacher();
-		
-		// should use some kind of templating to avoid this shit
-		$this->load->view('header_bs', $data);
-		$this->load->view('students/list', $data);
-		$this->load->view('footer_bs');
+
+		$teacher = $this->teacher_model->load_teacher($_SESSION['userid']);
+
+		print_r($teacher);
+
+		$data['name'] = $teacher->nome;
+		$data['surname'] = $teacher->cognome;
+
+		$this->load->view('teachers/home', $data);
 	}
 }
 ?>

@@ -37,7 +37,7 @@ class Teacher_model extends CI_Model {
             ->get('docenti');
 
 		if ( $q->num_rows > 0 ) {
-            //return  row mapped to "domain object"
+            echo "string";
         	return $q->row();
       	}
 
