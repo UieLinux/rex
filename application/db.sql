@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Mag 01, 2013 alle 11:58
+-- Generato il: Mag 01, 2013 alle 12:03
 -- Versione del server: 5.5.25
 -- Versione PHP: 5.4.4
 
@@ -87,8 +87,8 @@ CREATE TABLE `insegnamenti` (
 --
 
 INSERT INTO `insegnamenti` (`docenti_id`, `materie_id`, `classi_id`) VALUES
-(0, 1, 1),
-(0, 2, 1);
+(1, 1, 1),
+(1, 2, 1);
 
 -- --------------------------------------------------------
 
