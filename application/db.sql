@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Apr 23, 2013 alle 22:56
+-- Generato il: Mag 01, 2013 alle 11:58
 -- Versione del server: 5.5.25
 -- Versione PHP: 5.4.4
 
@@ -47,7 +47,14 @@ CREATE TABLE `docenti` (
   `nome` varchar(100) NOT NULL,
   `cognome` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dump dei dati per la tabella `docenti`
+--
+
+INSERT INTO `docenti` (`id`, `nome`, `cognome`) VALUES
+(1, 'Tester', 'Rossi');
 
 -- --------------------------------------------------------
 
@@ -173,7 +180,7 @@ CREATE TABLE `utenti` (
 --
 
 INSERT INTO `utenti` (`id`, `utente_id`, `tipo_utenza`, `email`, `password`) VALUES
-('0', 0, 0, 'tester@email.it', 'tester');
+('0', 1, 0, 'tester@email.it', 'tester');
 
 -- --------------------------------------------------------
 
