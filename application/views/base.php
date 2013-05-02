@@ -59,7 +59,7 @@
           <div class="nav-collapse collapse">
             
             <p class="navbar-text pull-right">
-              <a href="/auth/logout" class="navbar-link">Logout</a>
+              <a href="<?php echo site_url("auth/logout"); ?>" class="navbar-link">Logout</a>
             </p>
 
             <p class="navbar-text pull-right">
