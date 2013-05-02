@@ -35,6 +35,12 @@ class Welcome extends MY_Base_Controller {
 
 	public function index()
 	{
+		if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == 0)
+		{
+			// usertype 0 -> teacher
+			redirect('teachers');
+		}
+
 		$this->load->view('home');
 	}
 }
